@@ -1,0 +1,2 @@
+# zarodolgozat
+Primechem
