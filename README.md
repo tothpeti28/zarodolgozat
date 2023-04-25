@@ -7,5 +7,10 @@ Telepítés:
   -fájlkezelőben lépjünk be a frontend mappába, majd npm i -vel telepítsük a bootstrapet.
 
 Használat:
-1. Backend indítása: npm start
-2. Frontend indítása: index-html-t nyissuk meg böngészőben.
+1. XAMPP indítása adatbázis eléréséhez
+2. Frontend indítása: index-html-t nyissuk meg böngészőben, live server-rel.
+3. Backend indítása: npm start
+
+Felhasználók és jelszavaik:
+Admin - primechemadmin
+PrimeChem - 12345
