@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>PrimeChem.hu | Logged in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/solid.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/regular.css">
+    <script src="../main.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</head>
+
+<body onload="melyikNev()">
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid d-flex justify-content-start">
+         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          <i class="fa-solid fa-bars" style="color: #14A44D"></i>
+          </button> 
+        </div>  
+        <div class="container-fluid d-flex justify-content-center" id="logo">
+            <a class="navbar-brand" href="loggedIn.html">
+              <img src="../logo.png" alt="PrimeChem" style="width:100px;">
+            </a>
+          </div>
+        <div class="container-fluid mt-2 mb-2 d-flex justify-content-end" id="index">
+            <i class="fa-solid fa-user" style="color: #14A44D"></i>    
+            <button type="button" class="btn" id="loggedInUser" style="color: white;"></button>
+            <p>""</p>
+            <button type="button" class="btn btn-success" onclick="logout()">Kijelentkezés</button>        
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Információk</h1>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <a href="loggedIn.html" style="text-decoration: none">Rólunk | Kezdőlap</a>
+          <br>
+          <a href="#lenyilo" data-bs-toggle="collapse" style="text-decoration:none;">Katalógus</a>   
+      <div id="lenyilo" class="collapse">
+            <ul style="list-style:none;">
+                <li style="text-decoration:none;"><a href="tisztitoszerekLI.html" style="text-decoration: none; color: black; ">Tisztítószerek</a></li>
+                <li style="text-decoration: none;"><a href="samponokLI.html" style="text-decoration: none; color:black">Samponok</a></li>
+                <li style="text-decoration: none;"><a href="viaszokLI.html" style="text-decoration: none; color:black">Viaszok</a></li>
+                <li style="text-decoration: none;"><a href="felnitisztitokLI.html" style="text-decoration: none; color:black">Felnitisztítók</a></li>
+                <li style="text-decoration: none;"><a href="ablaktisztitokLI.html" style="text-decoration: none; color:black">Ablaktisztítók</a></li>
+                <li style="text-decoration: none;"><a href="apoloszerekLI.html" style="text-decoration: none; color:black">Ápolószerek</a></li>
+            </ul>
+        </div> 
+        <br>
+        <a href="rendeles.html" style="text-decoration: none">Rendelés Információk</a> 
+        </div>
+    </div>
+
+    <div class="row">
+      <!-- Carousel -->
+      <div id="indexCarousel" class="carousel slide col-md-8 mt-1 mb-2" data-bs-ride="carousel">
+      
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="3"></button>
+          </div>
+        
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../slideshow_kepek/benz.jpg" alt="autopolir" title="autopolir" class="d-flex" style=" margin: 30px; width: 90%;">
+            </div>
+            <div class="carousel-item">
+              <img src="../slideshow_kepek/skoda.jpg" alt="autopolir" title="autopolir" class="d-flex" style=" margin: 30px; width: 90%;">
+            </div>
+            <div class="carousel-item">
+              <img src="../slideshow_kepek/ford.jpg" alt="autopolir" title="autopolir" class="d-flex" style=" margin: 30px; width: 90%;">
+            </div>
+            <div class="carousel-item">
+              <img src="../slideshow_kepek/eu.png" alt="karpittisztitas" title="karpittisztitas" class="d-flex" style=" margin: 30px; width: 90%;">
+            </div>
+          </div>
+        
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#indexCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#indexCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="col-md-4 mt-1">
+         <h1>Üdvözöljük Önt a PrimeChem.hu oldalán!</h1> 
+         <br>
+      <p>A PrimeChem autókozmetikai vegyszerekkel, segédeszközökkel, gépekkel és gép alkatrészekkel foglalkozik.</p>
+      <p>10 évvel ezelőtt azzal a céllal alapítottuk cégünket, hogy az ország egész területén forgalmazhassuk termékeinket.
+      Rengeteg autómosóval, új és használtautó kereskedéssel állunk kapcsolatban.
+      Termékeink a legjobb minőséget képviselik és ár-érték arányban is verhetetlenek. </p>
+      <p>Látogasson el weboldalunkra, reméljük megtalálja az ön számára legkedvezőbb terméket.</p> 
+      
+      <img src="../logó.jpg" alt="" style="width: 500px; height: 300px;">
+        </div>
+      </div>
+</body>
+
+</html>

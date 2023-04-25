@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>PrimeChem.hu | Logged in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/solid.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/regular.css">
+    <script src="../main.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</head>
+
+<body onload="melyikNev()">
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid d-flex justify-content-start">
+         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          <i class="fa-solid fa-bars" style="color: #14A44D"></i>
+          </button> 
+        </div>  
+        <div class="container-fluid d-flex justify-content-center" id="logo">
+            <a class="navbar-brand" href="loggedIn.html">
+              <img src="../logo.png" alt="PrimeChem" style="width:100px;">
+            </a>
+          </div>
+        <div class="container-fluid mt-2 mb-2 d-flex justify-content-end" id="index">
+            <i class="fa-solid fa-user" style="color: #14A44D"></i>    
+            <button type="button" class="btn" id="loggedInUser" style="color: white;"></button>
+            <p>""</p>
+            <button type="button" class="btn btn-success" onclick="logout()">Kijelentkezés</button>        
+        </div>
+    </nav>
+
+  <!-- Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start" id="demo">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Admin felület</h1>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="admin.html" style="text-decoration: none;">Termék feltöltés</a>
+      <br>
+      <a href="termeklista.html" style="text-decoration: none;">Termékek listája</a>
+      <br>
+      <a href="lomtar.html" style="text-decoration: none;">Lomtár</a>
+      
+    </div>
+
+  </div>
+
+    <h1 class="container">Lomtár:</h1>
+    
+     <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Termék neve</th>
+                <th>Termék típusa</th>
+                <th>Termék leírása</th>
+                <th>Termék ára</th>
+                <th>Termék kiszerelése</th>
+                <th>Lomtárba helyezés</th>
+            </tr>
+        </thead>
+        <tbody id="lomtar">
+
+        </tbody>
+
+     </table>
+
+   
+
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>PrimeChem.hu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="./css/solid.css">
+    <link rel="stylesheet" href="./css/brands.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <script src="main.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="felnitisztitok()">
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid d-flex justify-content-start">
+         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <i class="fa-solid fa-bars" style="color: #14A44D"></i>
+          </button> 
+        </div>  
+        <div class="container-fluid d-flex justify-content-center" id="logo">
+            <a class="navbar-brand" href="index.html">
+              <img src="logo.png" alt="PrimeChem" style="width:100px;">
+            </a>
+          </div>
+        <div class="container-fluid mt-2 mb-2 d-flex justify-content-end" id="index">    
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registration">Regisztráció</button>
+            <p>""</p>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#login">Belépés</button>        
+    </div>
+    </nav>
+     <!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" id="demo">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Információk</h1>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a href="index.html" style="text-decoration: none;">Rólunk | Kezdőlap</a>
+      <br>
+      <a href="#lenyilo" data-bs-toggle="collapse" style="text-decoration:none;">Katalógus</a>   
+      <div id="lenyilo" class="collapse">
+            <ul style="list-style:none;">
+                <li style="text-decoration: none;"><a href="tisztitoszerek.html" style="text-decoration: none; color: black;">Tisztítószerek</a></li>
+                <li style="text-decoration: none;"><a href="samponok.html" style="text-decoration: none; color:black">Samponok</a></li>
+                <li style="text-decoration: none;"><a href="viaszok.html" style="text-decoration: none; color:black">Viaszok</a></li>
+                <li style="text-decoration: none;"><a href="felnitisztitok.html" style="text-decoration: none; color:#14A44D">Felnitisztítók</a></li>
+                <li style="text-decoration: none;"><a href="ablaktisztitok.html" style="text-decoration: none; color: black">Ablaktisztítók</a></li>
+                <li style="text-decoration: none;"><a href="apoloszerek.html" style="text-decoration: none; color:black">Ápolószerek</a></li>
+            </ul>
+        </div> 
+      
+    </div>
+    <div class="offcanvas-footer">
+        <p style="margin-left: 20px;">A rendelés információihoz kérjük jelentkezzen be!</p>
+      </div>
+  </div>
+  </div>
+  
+<!-- Regisztráció Modal -->
+<div class="modal fade" id="registration" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Regisztráció</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label class="form-label">Felhasználó név</label>
+            <input class="form-control" type="text" name="regUsername" id="regUsername" required>
+            <label class="form-label">Jelszó</label>
+            <input class="form-control" type="password" name="regPassword1" id="regPassword1" required>
+            <label class="form-label">Jelszó újra</label>
+            <input class="form-control" type="password" name="regPassword2" id="regPassword2" required>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="registration()">Ok</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezárás</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Bejelentkezés -->
+<div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Bejelentkezés</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <label class="form-label">Felhasználó név</label>
+              <input class="form-control" type="text" name="logUsername" id="logUsername" required>
+              <label class="form-label">Jelszó</label>
+              <input class="form-control" type="password" name="logPassword" id="logPassword" required>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" onclick="login()">Ok</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezárás</button>
+          </div>
+      </div>
+  </div>
+</div>
+    <div class="container">
+        <div class="row" id="felnitisztitok">
+            <h3>Felnitisztítók</h3>
+
+        </div>
+    </div>
+</body>
+
+</html>

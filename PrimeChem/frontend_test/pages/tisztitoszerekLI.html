@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>PrimeChem.hu | Logged in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/solid.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/regular.css">
+    <script src="../main.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</head>
+
+<body onload="melyikNev(),tisztitoszerek()">
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid d-flex justify-content-start">
+         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          <i class="fa-solid fa-bars" style="color: #14A44D"></i>
+          </button> 
+        </div>  
+        <div class="container-fluid d-flex justify-content-center" id="logo">
+            <a class="navbar-brand" href="loggedIn.html">
+              <img src="../logo.png" alt="PrimeChem" style="width:100px;">
+            </a>
+          </div>
+        <div class="container-fluid mt-2 mb-2 d-flex justify-content-end" id="index">
+            <i class="fa-solid fa-user" style="color: #14A44D"></i>    
+            <button type="button" class="btn" id="loggedInUser" style="color: white;"></button>
+            <p>""</p>
+            <button type="button" class="btn btn-success" onclick="logout()">Kijelentkezés</button>        
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Információk</h1>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <a href="loggedIn.html" style="text-decoration: none">Rólunk | Kezdőlap</a>
+          <br>
+          <a href="#lenyilo" data-bs-toggle="collapse" style="text-decoration:none;">Katalógus</a>   
+      <div id="lenyilo" class="collapse">
+            <ul style="list-style:none;">
+                <li style="text-decoration:none;"><a href="tisztitoszerekLI.html" style="text-decoration: none; color: #14A44D; ">Tisztítószerek</a></li>
+                <li style="text-decoration: none;"><a href="samponokLI.html" style="text-decoration: none; color:black">Samponok</a></li>
+                <li style="text-decoration: none;"><a href="viaszokLI.html" style="text-decoration: none; color:black">Viaszok</a></li>
+                <li style="text-decoration: none;"><a href="felnitisztitokLI.html" style="text-decoration: none; color:black">Felnitisztítók</a></li>
+                <li style="text-decoration: none;"><a href="ablaktisztitokLI.html" style="text-decoration: none; color:black">Ablaktisztítók</a></li>
+                <li style="text-decoration: none;"><a href="apoloszerekLI.html" style="text-decoration: none; color:black">Ápolószerek</a></li>
+            </ul>
+        </div> 
+        <br>
+        <a href="rendeles.html" style="text-decoration: none">Rendelés Információk</a> 
+        </div>
+    </div>
+    <div class="container">
+      <div class="row" id="tisztitoszerek">
+          <h3>Tisztítószerek</h3>
+
+      </div>
+  </div>
+</body>
+
+</html>

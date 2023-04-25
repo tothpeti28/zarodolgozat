@@ -1,0 +1,2 @@
+Admin felhasználónév: Admin
+Jelszó: primechemadmin

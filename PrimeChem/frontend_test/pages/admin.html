@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>PrimeChem.hu | Logged in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/solid.css">
+    <link rel="stylesheet" href="../css/brands.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/regular.css">
+    <script src="../main.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</head>
+
+<body onload="melyikNev()">
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid d-flex justify-content-start">
+         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          <i class="fa-solid fa-bars" style="color: #14A44D"></i>
+          </button> 
+        </div>  
+        <div class="container-fluid d-flex justify-content-center" id="logo">
+            <a class="navbar-brand" href="loggedIn.html">
+              <img src="../logo.png" alt="PrimeChem" style="width:100px;">
+            </a>
+          </div>
+        <div class="container-fluid mt-2 mb-2 d-flex justify-content-end" id="index">
+            <i class="fa-solid fa-user" style="color: #14A44D"></i>    
+            <button type="button" class="btn" id="loggedInUser" style="color: white;"></button>
+            <p>""</p>
+            <button type="button" class="btn btn-success" onclick="logout()">Kijelentkezés</button>        
+        </div>
+    </nav>
+
+  <!-- Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start" id="demo">
+    <div class="offcanvas-header">
+      <h1 class="offcanvas-title">Admin felület</h1>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="admin.html" style="text-decoration: none;">Termék feltöltés</a>
+      <br>
+      <a href="termeklista.html" style="text-decoration: none;">Termékek listája</a>
+      <br>
+      <a href="lomtar.html" style="text-decoration: none;">Lomtár</a>
+      
+    </div>
+
+  </div>
+
+    <h1 class="container">Termék feltöltés:</h1>
+    
+     
+
+    <form id="uploadForm" class="container">
+        <div class="row">
+        <div class="form-floating mb-3 mt-3 col">
+            <input class="form-control" id="termeknev" name="text" placeholder=" Termék neve"></input>
+              <label for="termeknev">Termék neve</label>
+         </div>
+         <div class="form-floating mb-3 mt-3 col">
+            <input class="form-control" id="termekleiras" name="text" placeholder=" Termék leírása"></input>
+              <label for="termekleiras">Termék leírása</label>
+         </div>
+        </div>
+        <div class="col mb-3">
+        <select class="form-select" id="termektipus">
+              <option selected disabled value="">Termék típusa</option>
+              <option>Ablaktisztítók</option>
+              <option>Ápolószerek</option>
+              <option>Felnitisztítók</option>
+              <option>Samponok</option>
+              <option>Tisztítószerek</option>
+              <option>Viaszok</option>
+            </select> 
+        </div>
+        <div class="row">
+        <div class=" form-floating col mt-3 mb-3">
+            <input class="form-control" id="termekar" name="text" placeholder=" Termék ára"></input>
+              <label for="termekar">Termék ára</label>
+        </div>
+        <div class=" form-floating col mt-3 mb-3">
+            <input class="form-control" id="termekkiszereles" name="text" placeholder="Kiszerelés típusa"></input>
+              <label for="termekkiszereles">Kiszerelés típusa</label>
+        </div>
+        </div>
+        <input type="file" id="myFiles" accept="image/*" multiple />
+        <br>
+        <button type="button" class="btn btn-success mt-3 mb-3" onclick="upload()">Feltöltés</button>
+    </form>
+    <h2></h2>
+    <h3></h3>
+
+    <div>
+
+    </div>
+    <script src="../script.js"></script>
+
+
+</body>
+</html>
